@@ -1,4 +1,4 @@
-# **t** is for terminal
+# iterm-magic: **t** is for terminal
 
 **iTerm2** automated configuration. Stop configuring your terminals or setting up your environment.
 
@@ -9,7 +9,7 @@ Be in control of your setup, trust it, forget about it and **focus on your tasks
 ## Usage
 
 ```
-Usage: t [OPTIONS] COMMAND
+Usage: iterm-magic [OPTIONS] COMMAND
 
 iTerm2 automated configuration
 
@@ -40,7 +40,7 @@ This is simple and keeps me motivated to make improvements
 
 ## System Dependencies
 
-**t** relies on the [iterm2](https://pypi.org/project/iterm2/) python package<br/>
+**iterm-magic** relies on the [iterm2](https://pypi.org/project/iterm2/) python package<br/>
 iterm2 relies on [iTerm](https://www.iterm2.com/) **3.3.10** or higher<br/>
 iTerm [python scripting API](https://www.iterm2.com/python-api/) must be enabled<br/>
 Follow [the tutorial here](https://www.iterm2.com/python-api/tutorial/index.html#tutorial-index) that will guide you to enable it<br/>
@@ -50,27 +50,27 @@ Follow [the tutorial here](https://www.iterm2.com/python-api/tutorial/index.html
 **t** can be installed with [pip](https://pip.pypa.io/):
 
 ```bash
-$ pip install t
+$ pip install iterm-magic
 ```
 
-Alternatively, you can grab the latest source code from [GitHub](https://github.com/michakfromparis/t):
+Alternatively, you can grab the latest source code from [GitHub](https://github.com/michakfromparis/iterm-magic):
 
 ```bash
-$ git clone git://github.com/michakfromparis/t.git
-$ cd t
+$ git clone git://github.com/michakfromparis/iterm-magic.git
+$ cd iterm-magic
 $ python setup.py install
 ```
 
 ### Documentation
 
-[![Documentation Status](https://readthedocs.org/projects/t-iterm2/badge/?version=latest)](https://t-iterm2.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/iterm-magic/badge/?version=latest)](https://iterm-magic.readthedocs.io/en/latest/?badge=latest)
 
-t has usage and reference documentation at [t.readthedocs.io](https://t-iterm.readthedocs.io/).<br/>
+iterm-magic has usage and reference documentation at [iterm-magic.readthedocs.io](https://iterm-magic.readthedocs.io/).<br/>
 Say Thanks! This is simple and keeps me motivated to make improvements
 
 ### Contributing
 
-**t** happily accepts contributions. Please see our [contributing documentation](https://t-iterm.readthedocs.io/en/latest/contributing.html) for some tips on getting started.
+**iterm-magic** happily accepts contributions. Please see our [contributing documentation](https://iterm-magic.readthedocs.io/en/latest/contributing.html) for some tips on getting started.
 
 ### Security Disclosures
 
