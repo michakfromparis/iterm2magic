@@ -1,10 +1,10 @@
 # **t** is for terminal
 
-iTerm2 automated configuration. Stop configuring your terminals or setting up your environment
+iTerm2 automated configuration. Stop configuring your terminals or setting up your environment.
 
-t is a very simple utility that allows you to set your terminal configurations and layout and run specific commands in each properly named tabs. t keeps track of terminal and processes it created and also allows you to shut everything down gracefully or forcefully.
+**t** is a very simple utility that allows you to set your terminal configurations and layout and run specific **commands in each properly named tabs**. **t** keeps track of terminal and processes it created and also allows you to shut everything down **gracefully** or **forcefully**.
 
-Be in control of your setup, trust it, forget about it and focus on your tasks.
+Be in control of your setup, trust it, forget about it and **focus on your tasks**.
 
 ## Usage
 
