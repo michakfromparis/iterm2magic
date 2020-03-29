@@ -1,15 +1,15 @@
-# iterm-magic: **t** is for terminal
+# iterm2magic: **t** is for terminal
 
 **iTerm2** automated configuration. Stop configuring your terminals or setting up your environment.
 
-**iterm-magic** is a very simple utility that allows you to define your terminal configurations and layout for a specific project and run **specific commands** in each **properly named tabs**. **t** keeps track of terminals and processes it creates and allows you to shut everything down **gracefully** or **forcefully**.
+**iterm2magic** is a very simple utility that allows you to define your terminal configurations and layout for a specific project and run **specific commands** in each **properly named tabs**. **t** keeps track of terminals and processes it creates and allows you to shut everything down **gracefully** or **forcefully**.
 
 Be in control of your setup, trust it, forget about it and **focus on your tasks**.
 
 ## Usage
 
 ```
-Usage: iterm-magic [OPTIONS] COMMAND
+Usage: iterm2magic [OPTIONS] COMMAND
 
 iTerm2 automated configuration
 
@@ -40,7 +40,7 @@ This is simple and keeps me motivated to make improvements
 
 ## System Dependencies
 
-**iterm-magic** relies on the [iterm2](https://pypi.org/project/iterm2/) python package<br/>
+**iterm2magic** relies on the [iterm2](https://pypi.org/project/iterm2/) python package<br/>
 iterm2 relies on [iTerm](https://www.iterm2.com/) **3.3.10** or higher<br/>
 iTerm [python scripting API](https://www.iterm2.com/python-api/) must be enabled<br/>
 Follow [the tutorial here](https://www.iterm2.com/python-api/tutorial/index.html#tutorial-index) that will guide you to enable it<br/>
@@ -50,27 +50,27 @@ Follow [the tutorial here](https://www.iterm2.com/python-api/tutorial/index.html
 **t** can be installed with [pip](https://pip.pypa.io/):
 
 ```bash
-$ pip install iterm-magic
+$ pip install iterm2magic
 ```
 
-Alternatively, you can grab the latest source code from [GitHub](https://github.com/michakfromparis/iterm-magic):
+Alternatively, you can grab the latest source code from [GitHub](https://github.com/michakfromparis/iterm2magic):
 
 ```bash
-$ git clone git://github.com/michakfromparis/iterm-magic.git
-$ cd iterm-magic
+$ git clone git://github.com/michakfromparis/iterm2magic.git
+$ cd iterm2magic
 $ python setup.py install
 ```
 
 ### Documentation
 
-[![Documentation Status](https://readthedocs.org/projects/iterm-magic/badge/?version=latest)](https://iterm-magic.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/iterm2magic/badge/?version=latest)](https://iterm2magic.readthedocs.io/en/latest/?badge=latest)
 
-iterm-magic has usage and reference documentation at [iterm-magic.readthedocs.io](https://iterm-magic.readthedocs.io/).<br/>
+iterm2magic has usage and reference documentation at [iterm2magic.readthedocs.io](https://iterm2magic.readthedocs.io/).<br/>
 Say Thanks! This is simple and keeps me motivated to make improvements
 
 ### Contributing
 
-**iterm-magic** happily accepts contributions. Please see our [contributing documentation](https://iterm-magic.readthedocs.io/en/latest/contributing.html) for some tips on getting started.
+**iterm2magic** happily accepts contributions. Please see our [contributing documentation](https://iterm2magic.readthedocs.io/en/latest/contributing.html) for some tips on getting started.
 
 ### Security Disclosures
 
