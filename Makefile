@@ -1,39 +1,14 @@
-# constants
-
 # output name
-OUTPUT_NAME				=	$(shell basename $(CURDIR))
+NAME							=	$(shell basename $(CURDIR))
 # source directory
-SOURCE_DIRECTORY	=	$(CURDIR)/src
-# build output directory
-OUTPUT_DIRECTORY	=	$(CURDIR)/build
+SOURCE						=	$(CURDIR)/src
 
 PYTHON_VERSION		=	3
 PYTHON						=	"python$(PYTHON_VERSION)"
 PIP								=	"pip$(PYTHON_VERSION)"
-ifndef GOPATH
-$(error GOPATH is not set)
-endif
-
-# host os detection
-HOST_OS=unknown
-ifeq ($(OS),Windows_NT)
-	HOST_OS=windows
-else
-	UNAME=$(shell uname -s)
-	ifeq ($(UNAME),Linux)
-		HOST_OS=linux
-	endif
-	ifeq ($(UNAME),Darwin)
-		HOST_OS=osx
-	endif
-endif
 
 # default to test and build
 all: test build
-
-# check build environment consistency
-check:
-	@if [ "$(HOST_OS)" = 'unknown' ]; then echo "FATAL: Could not detect HOST_OS"; exit 1; fi
 
 # install build dependencies
 deps: check
@@ -46,7 +21,7 @@ deps-dev: check deps
 # format code
 format: check
 	@isort --skip-glob=.tox --recursive .
-	@yapf -ir *.py $(SOURCE_DIRECTORY)/*.py
+	@yapf -ir *.py $(SOURCE)/*.py
 
 # run golint on all source tree
 lint: check
@@ -54,10 +29,10 @@ lint: check
 
 # build
 build:
-	$(PYTHON) setup.py sdist bdist_wheel
+	@$(PYTHON) setup.py sdist bdist_wheel
 
 run: check build
-	$(PYTHON) "$(SOURCE_DIRECTORY)/$(OUTPUT_NAME).py"
+	@$(PYTHON) "$(SOURCE)/$(NAME).py"
 
 # run tests
 test: check
@@ -67,33 +42,34 @@ test: check
 clean: clean-build clean-pyc clean-test
 
 clean-build:
-	rm -rf build/
-	rm -rf dist/
-	rm -rf .eggs/
-	find . -name '*.egg-info' -exec rm -rf {} +
-	find . -name '*.egg' -exec rm -f {} +
+	@rm -rf build/
+	@rm -rf dist/
+	@rm -rf .eggs/
+	@find . -name '*.egg-info' -exec rm -rf {} +
+	@find . -name '*.egg' -exec rm -f {} +
 
 clean-pyc:
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.pyo' -exec rm -f {} +
-	find . -name '*~' -exec rm -f {} +
-	find . -name '__pycache__' -exec rm -rf {} +
+	@find . -name '*.pyc' -exec rm -f {} +
+	@find . -name '*.pyo' -exec rm -f {} +
+	@find . -name '*~' -exec rm -f {} +
+	@find . -name '__pycache__' -exec rm -rf {} +
 
 clean-test:
-	rm -rf .tox/
-	rm -f .coverage
-	rm -rf htmlcov/
+	@rm -rf .tox/
+	@rm -f .coverage
+	@rm -rf htmlcov/
+
+# build dist & wheel
+dist: clean
+	@python setup.py sdist
+	@python setup.py bdist_wheel
+	@ls -l dist
+	@du -h dist
 
 # release & upload
 release: clean
-	python setup.py sdist upload
-	python setup.py bdist_wheel upload
-
-dist: clean
-	python setup.py sdist
-	python setup.py bdist_wheel
-	ls -l dist
-	@du -h dist
+	@python setup.py sdist upload
+	@python setup.py bdist_wheel upload
 
 # install
 install-develop:
@@ -104,4 +80,4 @@ install: clean
 
 # docs
 docs:
-	cd docs && make html
+	@cd docs && make html
