@@ -43,7 +43,7 @@ This is simple and keeps me motivated to make improvements
 **t** relies on the [iterm2](https://pypi.org/project/iterm2/) python package<br/>
 iterm2 relies on [iTerm](https://www.iterm2.com/) **3.3.10** or higher<br/>
 iTerm [python scripting API](https://www.iterm2.com/python-api/) must be enabled<br/>
-Follow [the tutorial here](https://www.iterm2.com/python-api/tutorial/index.html#tutorial-index) that will guide you to enabling it<br/>
+Follow [the tutorial here](https://www.iterm2.com/python-api/tutorial/index.html#tutorial-index) that will guide you to enable it<br/>
 
 ## Installation
 
