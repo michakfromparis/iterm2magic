@@ -106,8 +106,8 @@ setup(
         'Topic :: Software Development',
         'Topic :: Software Development :: Build Tools',
         'Topic :: System :: Installation/Setup',
-        'Topic :: System :: Terminals',
-        'Topic :: System :: System Administration',
+        'Topic :: Terminals',
+        'Topic :: System :: Systems Administration',
 
         # Pick your license as you wish
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
