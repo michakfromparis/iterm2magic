@@ -11,40 +11,38 @@ PIP								=	"pip$(PYTHON_VERSION)"
 all: test build
 
 # install build dependencies
-deps: check
+deps:
 	@$(PIP) install iterm2
 
 # install development dependencies
-deps-dev: check deps
-	@$(PIP) install yapf futures isort flake8
+deps-dev: deps
+	@$(PIP) install yapf futures isort flake8 twine
 
 # format code
-format: check
+format:
 	@isort --skip-glob=.tox --recursive .
 	@yapf -ir *.py $(SOURCE)/*.py
 
 # run golint on all source tree
-lint: check
+lint:
 	@flake8 --exclude=.tox
 
 # build
 build:
 	@$(PYTHON) setup.py sdist bdist_wheel
 
-run: check build
+run: build
 	@$(PYTHON) "$(SOURCE)/$(NAME).py"
 
 # run tests
-test: check
+test:
 	$(PYTHON) setup.py test
 
 # clean build artefacts
 clean: clean-build clean-pyc clean-test
 
 clean-build:
-	@rm -rf build/
-	@rm -rf dist/
-	@rm -rf .eggs/
+	@rm -rf build/ dist/ .eggs/
 	@find . -name '*.egg-info' -exec rm -rf {} +
 	@find . -name '*.egg' -exec rm -f {} +
 
@@ -55,21 +53,7 @@ clean-pyc:
 	@find . -name '__pycache__' -exec rm -rf {} +
 
 clean-test:
-	@rm -rf .tox/
-	@rm -f .coverage
-	@rm -rf htmlcov/
-
-# build dist & wheel
-dist: clean
-	@python setup.py sdist
-	@python setup.py bdist_wheel
-	@ls -l dist
-	@du -h dist
-
-# release & upload
-release: clean
-	@python setup.py sdist upload
-	@python setup.py bdist_wheel upload
+	@rm -rf .tox/ htmlcov/ .coverage
 
 # install
 install-develop:
@@ -81,3 +65,21 @@ install: clean
 # docs
 docs:
 	@cd docs && make html
+
+# build dist & wheel
+dist: clean
+	@python setup.py sdist
+	@python setup.py bdist_wheel
+	@ls -l dist
+	@du -h dist
+
+# release & upload
+release-legacy: clean
+	@python setup.py sdist upload
+	@python setup.py bdist_wheel upload
+
+upload-test: dist
+	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+upload: dist
+	twine upload dist/*
