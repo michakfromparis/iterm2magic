@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # Terminal Instant Manager
-import sys
-import os
-import os.path
 import getopt
 import json
+import os
+import os.path
+import sys
+
 import iterm2
 
 profile = 'Default'
