@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Terminal Instant Manager
-import getopt
+# import getopt
 import json
 import os
 import os.path
@@ -63,7 +63,7 @@ async def iTermStart(connection):
     firstTab = True
     for tabTitle in tabs:
         command = tabs[tabTitle]
-        if firstTab == True:
+        if firstTab is True:
             await new_window.current_tab.async_set_title(tabTitle)
             await new_window.current_tab.current_session.async_send_text(
                 command + '\n')

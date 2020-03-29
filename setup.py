@@ -48,7 +48,8 @@ setup(
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description='t is for terminal. iTerm2 automated configuration',  # Optional
+    description='t is for terminal. iTerm2 automated configuration',
+    # Optional
 
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
@@ -129,7 +130,9 @@ setup(
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords='terminal iterm iterm2 setup magic development administration build test',  # Optional
+    keywords='terminal iterm iterm2 setup magic\
+         development administration build test',
+    # Optional
 
     # When your source code is in a subdirectory under the project root, e.g.
     # `src/`, it is necessary to specify the `package_dir` argument.
