@@ -2,7 +2,7 @@
 
 **iTerm2** automated configuration. Stop configuring your terminals or setting up your environment.
 
-**t** is a very simple utility that allows you to define your terminal configurations and layout for a specific project and run **specific commands** in each **properly named tabs**. **t** keeps track of terminals and processes it creates and allows you to shut everything down **gracefully** or **forcefully**.
+**iterm-magic** is a very simple utility that allows you to define your terminal configurations and layout for a specific project and run **specific commands** in each **properly named tabs**. **t** keeps track of terminals and processes it creates and allows you to shut everything down **gracefully** or **forcefully**.
 
 Be in control of your setup, trust it, forget about it and **focus on your tasks**.
 
