@@ -33,10 +33,10 @@ Will create a new iTerm window with 3 tabs:
 
 ## Say Thanks!
 
-Simply **click on the icon below** to let me know you like it. Takes less than a minute.<br/>
-This is simple and keeps me motivated to make improvements
-
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/michel.courtine@docker.com)
+
+Simply **click on the icon above** to let me know you like it. Takes less than a minute.<br/>
+This is simple and keeps me motivated to make improvements
 
 ## System Dependencies
 
@@ -62,6 +62,8 @@ $ python setup.py install
 ```
 
 ### Documentation
+
+[![Documentation Status](https://readthedocs.org/projects/t-iterm2/badge/?version=latest)](https://t-iterm2.readthedocs.io/en/latest/?badge=latest)
 
 t has usage and reference documentation at [t.readthedocs.io](https://t-iterm.readthedocs.io/).<br/>
 Say Thanks! This is simple and keeps me motivated to make improvements
