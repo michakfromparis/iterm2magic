@@ -64,8 +64,7 @@ test: check
 	$(PYTHON) setup.py test
 
 # clean build artefacts
-clean:
-	rm -rf "$(OUTPUT_DIRECTORY)"
+clean: clean-build clean-pyc clean-test
 
 clean-build:
 	rm -rf build/
