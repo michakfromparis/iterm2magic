@@ -46,7 +46,7 @@ deps-dev: check deps
 # format code
 format: check
 	isort --skip-glob=.tox --recursive .
-	yapf
+	yapf -ir *.py $(SOURCE_DIRECTORY)/*.py
 
 # run golint on all source tree
 lint: check
