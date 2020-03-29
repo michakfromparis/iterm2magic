@@ -45,12 +45,12 @@ deps-dev: check deps
 
 # format code
 format: check
-	isort --skip-glob=.tox --recursive .
-	yapf -ir *.py $(SOURCE_DIRECTORY)/*.py
+	@isort --skip-glob=.tox --recursive .
+	@yapf -ir *.py $(SOURCE_DIRECTORY)/*.py
 
 # run golint on all source tree
 lint: check
-	flake8 --exclude=.tox
+	@flake8 --exclude=.tox
 
 # build
 build:
