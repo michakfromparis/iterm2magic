@@ -30,3 +30,7 @@ pip install t
 ```
 
 
+
+Say Thanks! This is simple and keeps me motivated to make improvements
+
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/michel.courtine@docker.com)
