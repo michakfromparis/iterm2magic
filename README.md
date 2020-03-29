@@ -11,11 +11,11 @@ Be in control of your setup, trust it, forget about it and **focus on your tasks
 ```
 Usage: t [OPTIONS] COMMAND
 
-Setup, management and deployment of alf for developers
+iTerm2 automated configuration
 
 Commands:
-  start		Start the docker containers, api & dashboard
-  stop		Stop the docker containers, api & dashboard
+  start		Start commands in named tabs or named configuration
+  stop		Stop commands and close opened tabs / windows
   help		display this page
 ```
 
@@ -54,7 +54,7 @@ urllib3 can be installed with [pip](https://pip.pypa.io/):
 $ pip install t
 ```
 
-Alternatively, you can grab the latest source code from [GitHub](https://github.com/urllib3/urllib3):
+Alternatively, you can grab the latest source code from [GitHub](https://github.com/michakfromparis/t):
 
 ```bash
 $ git clone git://github.com/michakfromparis/t.git
@@ -69,7 +69,7 @@ Say Thanks! This is simple and keeps me motivated to make improvements
 
 ### Contributing
 
-t happily accepts contributions. Please see our [contributing documentation](https://urllib3.readthedocs.io/en/latest/contributing.html) for some tips on getting started.
+**t** happily accepts contributions. Please see our [contributing documentation](https://urllib3.readthedocs.io/en/latest/contributing.html) for some tips on getting started.
 
 ### Security Disclosures
 
@@ -78,3 +78,7 @@ To report a security vulnerability, please use the [Tidelift security contact](h
 ### Maintainers
 
 - [@michakfromparis](https://github.com/michakfromparis) (Michel Courtine)
+
+### Credits
+
+Infinite thanks to George Nachman ([@gnachman](https://github.com/gnachman)) for brewing OSX's favorite terminal for so many years and opening the scripting API to python after years of already opening it to AppleScript. 
