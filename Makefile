@@ -16,7 +16,7 @@ deps:
 
 # install development dependencies
 deps-dev: deps
-	@$(PIP) install yapf futures isort flake8 twine
+	@$(PIP) install yapf futures isort flake8 twine tox
 
 # format code
 format:
